@@ -1,9 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 .App {
-  background-color: #1f0343;
+  background: linear-gradient(to bottom, #130428, #050112);
   margin: 0;
   padding: 0;
 }
@@ -12,39 +8,85 @@
   align-items: center;
   color: #fff;
   display: flex;
-  flex-direction: column;
+  gap: 120px;
   justify-content: center;
   min-height: 100vh;
 }
 
+.centralBox {
+  border: 1px solid #778899;
+  border-radius: 30px;
+  bottom: 55%;
+  height: 40vh;
+  right: 32.3%;
+  opacity: 0.8;
+  position: absolute;
+  width: 20vw;
+}
+
 .Content {
-  align-items: center;
+  align-items: flex-start;
   display: flex;
+  flex-direction: column;
+  gap: 40px;
   justify-content: center;
+  margin-top: 58px;
 }
 
 .MainContent {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  justify-content: center;
+}
+
+.Four_small_boxe {
   display: grid;
   grid-template-columns: auto auto;
-  gap: 50px 100px;
+  gap: 30px;
 }
 
 .Four_small_boxes {
   display: grid;
   grid-template-columns: auto auto;
-  gap: 20px;
+  gap: 30px 25px;
 }
 
 .smallBox {
+  background: linear-gradient(to bottom, #353151, #1a112e, #120825);
   border: 1px solid #778899;
-  border-radius: 30px;
-  height: 20vh;
-  width: 10vw;
+  border-radius: 25px;
+  height: 19vh;
+  opacity: 0.8;
+  width: 9vw;
 }
 
-.Small_box {
+.smallBox1 {
+  border: 1px solid #778899;
+  border-radius: 25px;
+  bottom: 31%;
+  height: 19vh;
+  opacity: 0.8;
+  position: absolute;
+  right: 40%;
+  width: 9vw;
+}
+
+.Box {
+  background: linear-gradient(to bottom, #3a3555, #1f1436, #15092b);
+  border: 1px solid #778899;
+  border-radius: 25px;
+  height: 45vh;
+  margin-top: 50px;
+  opacity: 0.8;
+  width: 15vw;
+}
+
+.Box1 {
   border: 1px solid #778899;
   border-radius: 30px;
-  height: 45vh;
+  height: 48vh;
+  opacity: 0.8;
   width: 22vw;
 }
