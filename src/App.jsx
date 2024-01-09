@@ -1,13 +1,59 @@
 import './App.css';
 import React from 'react';
+import { BsCloudRainHeavy } from 'react-icons/bs';
+import { FiWind } from 'react-icons/fi';
+import { MdOutlineWaterDrop } from 'react-icons/md';
 import sunshine from './images/sunny.png';
+import cloud from './images/cloudy1.png';
 
 function App() {
   return (
     <div className="App">
       <div className="App-container">
         <div className="centralBox">
-          <h1>Hello world!</h1>
+          <div className="Element1">
+            <h3>Monreal</h3>
+            <div className="Temp-icon">
+              <h1 className="head">19˚</h1>
+              <img
+                src={cloud}
+                alt="Cloudy"
+                style={{ height: 150, width: 150 }}
+              />
+            </div>
+            <div className="temp-desc">
+              <div className="high-low">
+                <p>H:24˚</p>
+                <p>L:18˚</p>
+              </div>
+              <p>Cloudy</p>
+            </div>
+          </div>
+          <div className="Element2">
+            <div className="sub-Element2">
+              <div className="Items">
+                <div className="iconParams">
+                  <BsCloudRainHeavy />
+                  <p>Precipitation</p>
+                </div>
+                <h4>9 mm in 24h</h4>
+              </div>
+              <div className="Items">
+                <div className="iconParams">
+                  <FiWind />
+                  <p>Wind</p>
+                </div>
+                <h4>9KM/H</h4>
+              </div>
+              <div className="Items">
+                <div className="iconParams">
+                  <MdOutlineWaterDrop />
+                  <p>Humidity</p>
+                </div>
+                <h4>83%</h4>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="smallBox1">
           <h2>Hello world!</h2>

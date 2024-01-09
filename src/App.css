@@ -12,14 +12,65 @@
 }
 
 .centralBox {
+  background: linear-gradient(to bottom, #3a3555, #1f1436, #15092b);
   border: 1px solid #6a6488;
   border-radius: 30px;
   bottom: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
   height: 40vh;
   right: 32%;
   opacity: 0.8;
   position: absolute;
   width: 20vw;
+}
+
+.Element1 {
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 25px auto;
+  padding-bottom: 30px;
+  width: 90%;
+}
+
+.Element2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.sub-Element2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Items {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.iconParams {
+  display: flex;
+  gap: 5px;
+}
+
+.Temp-icon {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.temp-desc {
+  display: flex;
+  justify-content: space-between;
 }
 
 .Content {
@@ -72,7 +123,6 @@
 }
 
 .Box {
-  background: linear-gradient(to bottom, #3a3555, #1f1436, #15092b);
   border: 1px solid #6a6488;
   border-radius: 25px;
   height: 45vh;
