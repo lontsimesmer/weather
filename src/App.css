@@ -102,6 +102,11 @@
   gap: 30px 25px;
 }
 
+.head1 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
 .smallBox {
   background: linear-gradient(to bottom, #353151, #130a27);
   border: 1px solid #6a6488;
@@ -109,6 +114,22 @@
   height: 19vh;
   opacity: 0.8;
   width: 9vw;
+}
+
+.smallBox-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  padding-top: 20px;
+  width: 80%;
+}
+
+.temp-days {
+  align-items: flex-end;
+  display: flex;
+  gap: 50px;
 }
 
 .smallBox1 {
@@ -123,12 +144,31 @@
 }
 
 .Box {
+  align-items: center;
   border: 1px solid #6a6488;
   border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
   height: 45vh;
+  justify-content: center;
   margin-top: 50px;
   opacity: 0.8;
   width: 15vw;
+}
+
+.descTemp {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.variants {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .Box1 {

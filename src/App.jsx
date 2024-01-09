@@ -1,10 +1,16 @@
 import './App.css';
 import React from 'react';
 import { BsCloudRainHeavy } from 'react-icons/bs';
-import { FiWind } from 'react-icons/fi';
+import { FiSunrise, FiWind } from 'react-icons/fi';
+import { LiaThermometerThreeQuartersSolid } from 'react-icons/lia';
 import { MdOutlineWaterDrop } from 'react-icons/md';
-import sunshine from './images/sunny.png';
 import cloud from './images/cloudy1.png';
+import cloud1 from './images/cloudy.png';
+import moon from './images/night.png';
+import moon1 from './images/moon-and-stars.png';
+import rainfall from './images/rain1.png';
+import sunrain from './images/rain.png';
+import sunshine from './images/sunny.png';
 
 function App() {
   return (
@@ -56,21 +62,36 @@ function App() {
           </div>
         </div>
         <div className="smallBox1">
-          <h2>Hello world!</h2>
+          <div className="iconParams">
+            <BsCloudRainHeavy />
+            <p>PRECIPITATION</p>
+          </div>
         </div>
         <div className="Content">
           <div className="Four_small_boxe">
             <div className="smallBox">
-              <h2>Hello world!</h2>
+              <div className="iconParams">
+                <FiWind />
+                <p>Wind</p>
+              </div>
             </div>
             <div className="smallBox">
-              <h2>Hello world!</h2>
+              <div className="iconParams">
+                <LiaThermometerThreeQuartersSolid style={{ fontSize: 20 }} />
+                <p>FEELS LIKE</p>
+              </div>
             </div>
             <div className="smallBox">
-              <h2>Hello world!</h2>
+              <div className="iconParams">
+                <MdOutlineWaterDrop />
+                <p>HUMIDITY</p>
+              </div>
             </div>
             <div className="smallBox">
-              <h2>Hello world!</h2>
+              <div className="iconParams">
+                <FiSunrise />
+                <p>SUNRISE</p>
+              </div>
             </div>
           </div>
           <div className="Box1">
@@ -155,20 +176,75 @@ function App() {
         </div>
         <div className="MainContent">
           <div className="Box">
-            <h1>Hello world!</h1>
+            <img
+              src={moon}
+              alt="nightime"
+              style={{ height: 150, width: 150 }}
+            />
+            <div className="descTemp">
+              <h3>Montreal, Canada</h3>
+              <h1 className="head">19˚</h1>
+            </div>
+            <div className="variants">
+              <div className="high-low">
+                <p>H:24˚</p>
+                <p>L:18˚</p>
+              </div>
+              <p>Cloudy night</p>
+            </div>
           </div>
           <div className="Four_small_boxes">
             <div className="smallBox">
-              <h2>Hello world!</h2>
+              <div className="smallBox-content">
+                <img
+                  src={cloud1}
+                  alt="Cloudy"
+                  style={{ height: 100, width: 100 }}
+                />
+                <div className="temp-days">
+                  <h2 className="head1">21˚</h2>
+                  <h4>TUE</h4>
+                </div>
+              </div>
             </div>
             <div className="smallBox">
-              <h2>Hello world!</h2>
+              <div className="smallBox-content">
+                <img
+                  src={moon1}
+                  alt="twilight"
+                  style={{ height: 100, width: 100 }}
+                />
+                <div className="temp-days">
+                  <h2 className="head1">21˚</h2>
+                  <h4>WED</h4>
+                </div>
+              </div>
             </div>
             <div className="smallBox">
-              <h2>Hello world!</h2>
+              <div className="smallBox-content">
+                <img
+                  src={sunrain}
+                  alt="sunrain"
+                  style={{ height: 100, width: 100 }}
+                />
+                <div className="temp-days">
+                  <h2 className="head1">21˚</h2>
+                  <h4>THU</h4>
+                </div>
+              </div>
             </div>
             <div className="smallBox">
-              <h2>Hello world!</h2>
+              <div className="smallBox-content">
+                <img
+                  src={rainfall}
+                  alt="rainfall"
+                  style={{ height: 100, width: 100 }}
+                />
+                <div className="temp-days">
+                  <h2 className="head1">21˚</h2>
+                  <h4>FRI</h4>
+                </div>
+              </div>
             </div>
           </div>
         </div>
