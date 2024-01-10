@@ -15,6 +15,13 @@ import sunshine from './images/sunny.png';
 function App() {
   return (
     <div className="App">
+      {/* <span>
+        Right now in{' '}
+        <span className="search" contentEditable="true">
+          Montreal
+        </span>{' '}
+        it is Cloudy
+      </span> */}
       <div className="App-container">
         <div className="centralBox">
           <div className="Element1">
@@ -63,7 +70,7 @@ function App() {
         </div>
         <div className="smallBox1">
           <div className="iconParams">
-            <BsCloudRainHeavy />
+            <BsCloudRainHeavy style={{ color: '#83A7B2', fontSize: 20 }} />
             <p>PRECIPITATION</p>
           </div>
         </div>
@@ -71,25 +78,29 @@ function App() {
           <div className="Four_small_boxe">
             <div className="smallBox">
               <div className="iconParams">
-                <FiWind />
-                <p>Wind</p>
+                <FiWind style={{ fontSize: 20 }} />
+                <p>WIND</p>
               </div>
             </div>
             <div className="smallBox">
               <div className="iconParams">
-                <LiaThermometerThreeQuartersSolid style={{ fontSize: 20 }} />
+                <LiaThermometerThreeQuartersSolid
+                  style={{ color: '#ff4500', fontSize: 25 }}
+                />
                 <p>FEELS LIKE</p>
               </div>
             </div>
             <div className="smallBox">
               <div className="iconParams">
-                <MdOutlineWaterDrop />
+                <MdOutlineWaterDrop
+                  style={{ color: '#00bfff', fontSize: 20 }}
+                />
                 <p>HUMIDITY</p>
               </div>
             </div>
             <div className="smallBox">
               <div className="iconParams">
-                <FiSunrise />
+                <FiSunrise style={{ color: '#ffd700', fontSize: 20 }} />
                 <p>SUNRISE</p>
               </div>
             </div>
@@ -115,60 +126,63 @@ function App() {
             </div>
             <div className="innerContent">
               <div className="Sub-content">
-                <div className="dayStats">
+                <div
+                  className="dayStats"
+                  style={{ backgroundColor: '#48309D' }}
+                >
                   <div className="day-icon">
                     <h4>Mon</h4>
                     <img
                       src={sunshine}
                       alt="Sun"
-                      style={{ height: 40, width: 40 }}
+                      style={{ height: 35, width: 35 }}
                     />
                   </div>
                   <h4>17˚</h4>
                 </div>
                 <div className="dayStats">
                   <div className="day-icon">
-                    <h4>Mon</h4>
+                    <h4>Tue</h4>
                     <img
-                      src={sunshine}
-                      alt="Sun"
-                      style={{ height: 40, width: 40 }}
+                      src={cloud1}
+                      alt="Cloudy"
+                      style={{ height: 35, width: 35 }}
                     />
                   </div>
-                  <h4>17˚</h4>
+                  <h4>16˚</h4>
                 </div>
                 <div className="dayStats">
                   <div className="day-icon">
-                    <h4>Mon</h4>
+                    <h4>Wed</h4>
                     <img
-                      src={sunshine}
-                      alt="Sun"
-                      style={{ height: 40, width: 40 }}
+                      src={sunrain}
+                      alt="sunrain"
+                      style={{ height: 35, width: 35 }}
                     />
                   </div>
-                  <h4>17˚</h4>
+                  <h4>20˚</h4>
                 </div>
                 <div className="dayStats">
                   <div className="day-icon">
-                    <h4>Mon</h4>
+                    <h4>Thu</h4>
                     <img
-                      src={sunshine}
-                      alt="Sun"
-                      style={{ height: 40, width: 40 }}
+                      src={cloud}
+                      alt="Cloudy"
+                      style={{ height: 35, width: 35 }}
                     />
                   </div>
-                  <h4>17˚</h4>
+                  <h4>22˚</h4>
                 </div>
                 <div className="dayStats">
                   <div className="day-icon">
-                    <h4>Mon</h4>
+                    <h4>Fri</h4>
                     <img
-                      src={sunshine}
-                      alt="Sun"
-                      style={{ height: 40, width: 40 }}
+                      src={rainfall}
+                      alt="rainfall"
+                      style={{ height: 35, width: 35 }}
                     />
                   </div>
-                  <h4>17˚</h4>
+                  <h4>19˚</h4>
                 </div>
               </div>
             </div>

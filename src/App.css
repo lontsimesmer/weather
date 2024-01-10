@@ -1,10 +1,14 @@
 .App {
   background: linear-gradient(to bottom, #130428, #050112);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  /* height: 120vh; */
+  justify-content: center;
 }
 
 .App-container {
   align-items: center;
-  color: #fff;
   display: flex;
   gap: 100px;
   justify-content: center;
@@ -12,22 +16,25 @@
 }
 
 .centralBox {
-  background: linear-gradient(to bottom, #3a3555, #1f1436, #15092b);
+  background: linear-gradient(to bottom, #291a41, #35294f, #423d5c);
+  /* backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.2); */
   border: 1px solid #6a6488;
   border-radius: 30px;
   bottom: 55%;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 15px;
   height: 40vh;
   right: 32%;
   opacity: 0.8;
   position: absolute;
   width: 20vw;
+  z-index: 1;
 }
 
 .Element1 {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ccc;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,6 +58,7 @@
 
 .Items {
   align-items: center;
+  /* border-left: 1px solid #eee; */
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -59,6 +67,7 @@
 .iconParams {
   display: flex;
   gap: 5px;
+  padding: 15px 0 0 15px;
 }
 
 .Temp-icon {
@@ -145,6 +154,7 @@
 
 .Box {
   align-items: center;
+  background: linear-gradient(to bottom, #3a3259, #281e40, #130b25);
   border: 1px solid #6a6488;
   border-radius: 25px;
   display: flex;
@@ -211,7 +221,6 @@
 
 .innerContent {
   align-items: center;
-  /* background: linear-gradient(to bottom, #3f3d5c, #1b162e, #120c26); */
   background: linear-gradient(to bottom, #3a3259, #281e40, #130b25);
   border: 1px solid #6a6488;
   border-radius: 30px;
