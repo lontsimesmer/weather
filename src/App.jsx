@@ -15,13 +15,13 @@ import sunshine from './images/sunny.png';
 function App() {
   return (
     <div className="App">
-      {/* <span>
+      <span className="search-area">
         Right now in{' '}
         <span className="search" contentEditable="true">
-          Montreal
-        </span>{' '}
+          Montreal, Canada
+        </span>
         it is Cloudy
-      </span> */}
+      </span>
       <div className="App-container">
         <div className="centralBox">
           <div className="Element1">

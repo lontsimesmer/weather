@@ -1,35 +1,50 @@
 .App {
+  align-items: center;
   background: linear-gradient(to bottom, #130428, #050112);
   color: #fff;
   display: flex;
   flex-direction: column;
-  /* height: 120vh; */
+  height: 120vh;
+  gap: 20px;
   justify-content: center;
 }
 
 .App-container {
   align-items: center;
   display: flex;
-  gap: 100px;
+  gap: 110px;
   justify-content: center;
   min-height: 100vh;
 }
 
+.search-area {
+  color: #f5fffa;
+  font-size: 30px;
+}
+
+.search {
+  border-bottom: 1px solid #ccc;
+  font-size: 25px;
+  min-width: 2vw;
+  opacity: 0.5;
+  outline: none;
+  padding: 0 10px;
+}
+
 .centralBox {
   background: linear-gradient(to bottom, #291a41, #35294f, #423d5c);
-  /* backdrop-filter: blur(8px);
-  background-color: rgba(255, 255, 255, 0.2); */
   border: 1px solid #6a6488;
   border-radius: 30px;
-  bottom: 55%;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   gap: 15px;
   height: 40vh;
-  right: 32%;
+  right: 32.8%;
   opacity: 0.8;
   position: absolute;
-  width: 20vw;
+  top: 15%;
+  width: 19.3vw;
   z-index: 1;
 }
 
@@ -88,14 +103,14 @@
   flex-direction: column;
   gap: 40px;
   justify-content: center;
-  margin-top: 58px;
+  /* margin-top: 58px; */
 }
 
 .MainContent {
   align-items: flex-end;
   display: flex;
   flex-direction: column;
-  gap: 70px;
+  gap: 75px;
   justify-content: center;
 }
 
@@ -144,12 +159,13 @@
 .smallBox1 {
   border: 1px solid #6a6488;
   border-radius: 25px;
-  bottom: 31%;
+  bottom: 20.5%;
   height: 19vh;
   opacity: 0.8;
   position: absolute;
-  right: 40.5%;
+  right: 41%;
   width: 9vw;
+  z-index: 1;
 }
 
 .Box {
@@ -162,9 +178,9 @@
   gap: 50px;
   height: 45vh;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 10px;
   opacity: 0.8;
-  width: 15vw;
+  width: 15.8vw;
 }
 
 .descTemp {
@@ -185,7 +201,7 @@
   background: linear-gradient(to bottom, #3a3259, #281e40, #130b25);
   border: 1px solid #6a6488;
   border-radius: 30px;
-  height: 48vh;
+  height: 50vh;
   opacity: 0.8;
   width: 22vw;
 }
@@ -195,7 +211,7 @@
   display: flex;
   gap: 50px;
   justify-content: center;
-  /* padding-top: 10px; */
+  padding-top: 10px;
 }
 
 .tempStats {
@@ -228,7 +244,7 @@
   height: 22vh;
   justify-content: center;
   margin-left: 10px;
-  margin-top: 40px;
+  margin-top: 50px;
   width: 20.9vw;
 }
 
