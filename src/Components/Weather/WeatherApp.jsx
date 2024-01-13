@@ -1,35 +1,71 @@
-import './App.css';
-import React from 'react';
+import React, { useRef } from 'react';
+import './WeatherApp.css';
 import { BsCloudRainHeavy } from 'react-icons/bs';
 import { FiSunrise, FiWind } from 'react-icons/fi';
 import { LiaThermometerThreeQuartersSolid } from 'react-icons/lia';
 import { MdOutlineWaterDrop } from 'react-icons/md';
-import cloud from './images/cloudy1.png';
-import cloud1 from './images/cloudy.png';
-import moon from './images/night.png';
-import moon1 from './images/moon-and-stars.png';
-import rainfall from './images/rain1.png';
-import sunrain from './images/rain.png';
-import sunshine from './images/sunny.png';
+import cloud from '../Assets/images/cloudy.png';
+import cloud1 from '../Assets/images/cloudy1.png';
+import moon from '../Assets/images/moon-and-stars.png';
+import moon1 from '../Assets/images/night.png';
+import rainfall from '../Assets/images/rain.png';
+import sunrain from '../Assets/images/rain1.png';
+import sunshine from '../Assets/images/sunny.png';
 
-function App() {
+function WeatherApp() {
+  const apiKey = '220df04dc0c20f789cac20d653fc02c6';
+
+  const [cityInput, setCityInput] = React.useState('');
+  // const [city, setCity] = React.useState('');
+  const searchRef = useRef();
+
+  // Perform debounceFetch on search field
+  const handleFetch = async () => {
+    // eslint-disable-next-line
+    console.log('cityinput', cityInput);
+
+    if (searchRef.current.innerHTML === '') {
+      return 0;
+    }
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${
+      searchRef.current.innerHTML || ''
+    }&units=Metric&appid=${apiKey}`;
+    const res = await fetch(url);
+    const data = await res.json();
+    // eslint-disable-next-line
+    console.log('cityData', data);
+    return 0;
+  };
+
+  React.useEffect(() => {
+    const delayInputTimeoutId = setTimeout(() => {
+      handleFetch();
+    }, 1000);
+    return () => clearTimeout(delayInputTimeoutId);
+  }, [cityInput, 1000]);
+
   return (
     <div className="App">
-      <span className="search-area">
+      <span className="Search-bar">
         Right now in{' '}
-        <span className="search" contentEditable="true">
+        <span
+          className="search"
+          contentEditable="true"
+          ref={searchRef}
+          onInput={(e) => setCityInput(e.target.innerHTML)}
+        >
           Montreal, Canada
         </span>
         it is Cloudy
       </span>
-      <div className="App-container">
+      <div className="Weather-container">
         <div className="centralBox">
           <div className="Element1">
             <h3>Monreal</h3>
             <div className="Temp-icon">
               <h1 className="head">19˚</h1>
               <img
-                src={cloud}
+                src={cloud1}
                 alt="Cloudy"
                 style={{ height: 150, width: 150 }}
               />
@@ -75,7 +111,7 @@ function App() {
           </div>
         </div>
         <div className="Content">
-          <div className="Four_small_boxe">
+          <div className="Grid-box-1">
             <div className="smallBox">
               <div className="iconParams">
                 <FiWind style={{ fontSize: 20 }} />
@@ -207,11 +243,11 @@ function App() {
               <p>Cloudy night</p>
             </div>
           </div>
-          <div className="Four_small_boxes">
+          <div className="Grid-box-2">
             <div className="smallBox">
               <div className="smallBox-content">
                 <img
-                  src={cloud1}
+                  src={cloud}
                   alt="Cloudy"
                   style={{ height: 100, width: 100 }}
                 />
@@ -267,4 +303,4 @@ function App() {
   );
 }
 
-export default App;
+export default WeatherApp;
