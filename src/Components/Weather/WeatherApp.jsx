@@ -18,6 +18,8 @@ function WeatherApp() {
   const [cityInput, setCityInput] = React.useState('');
   // const [city, setCity] = React.useState('');
   const searchRef = useRef();
+  // const tempRef = useRef();
+  // const describRef = useRef();
 
   // Perform debounceFetch on search field
   const handleFetch = async () => {
@@ -33,7 +35,14 @@ function WeatherApp() {
     const res = await fetch(url);
     const data = await res.json();
     // eslint-disable-next-line
-    console.log('cityData', data);
+    console.log(data);
+
+    const Temperature = document.getElementsByClassName('weatherTemp');
+    Temperature[0].innerHTML = data.main.temp;
+
+    // tempRef.current.innerHTML = data.main.temp;
+    // describRef.current.innerHTML = data.weather[0].description;
+
     return 0;
   };
 
@@ -63,7 +72,7 @@ function WeatherApp() {
           <div className="Element1">
             <h3>Monreal</h3>
             <div className="Temp-icon">
-              <h1 className="head">19˚</h1>
+              <h1 className="weatherTemp">19˚</h1>
               <img
                 src={cloud1}
                 alt="Cloudy"
@@ -149,7 +158,7 @@ function WeatherApp() {
                 style={{ height: 180, width: 180 }}
               />
               <div className="tempStats">
-                <h1 className="head">19˚C</h1>
+                <h1 className="weatherTemp">19˚C</h1>
                 <div className="high-low">
                   <p>H:24˚</p>
                   <p>L:18˚</p>
@@ -233,7 +242,7 @@ function WeatherApp() {
             />
             <div className="descTemp">
               <h3>Montreal, Canada</h3>
-              <h1 className="head">19˚</h1>
+              <h1 className="weatherTemp">19˚</h1>
             </div>
             <div className="variants">
               <div className="high-low">

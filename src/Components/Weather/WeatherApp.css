@@ -28,9 +28,7 @@
     rgba(255, 255, 255, 0.1),
     rgba(255, 255, 255, 0)
   );
-  /* background: linear-gradient(to bottom, #291a41, #35294f, #423d5c); */
-  /* border: 1px solid #6a6488; */
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border: 1px solid #6a6488;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 30px;
   bottom: 0;
@@ -154,7 +152,6 @@
 }
 
 .smallBox1 {
-  /* background-color: rgba(255, 255, 255, 0.1); */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   background: linear-gradient(
@@ -163,8 +160,6 @@
     rgba(255, 255, 255, 0)
   );
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  /* background: linear-gradient(to top, #1c0e32, #3d355b); */
-  /* border: 1px solid #6a6488; */
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 25px;
   bottom: 20.5%;
@@ -175,6 +170,21 @@
   width: 9vw;
   z-index: 1;
 }
+
+/* .centralBox::after {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0) 40%
+  ) !important;
+  filter: opacity(1);
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+} */
 
 .Box {
   align-items: center;
@@ -217,7 +227,7 @@
 .Icon-temp {
   align-items: center;
   display: flex;
-  gap: 50px;
+  gap: 60px;
   justify-content: center;
   padding-top: 10px;
 }
@@ -227,7 +237,7 @@
   flex-direction: column;
 }
 
-.head {
+.weatherTemp {
   font-size: 4rem;
   font-weight: 500;
 }
