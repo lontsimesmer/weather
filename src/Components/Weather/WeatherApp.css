@@ -6,20 +6,6 @@
   min-height: 100vh;
 }
 
-.Search-bar {
-  color: #f5fffa;
-  font-size: 30px;
-}
-
-.search {
-  border-bottom: 1px solid #ccc;
-  font-size: 25px;
-  min-width: 2vw;
-  opacity: 0.5;
-  outline: none;
-  padding: 0 10px;
-}
-
 .centralBox {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -35,12 +21,12 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  height: 40vh;
-  right: 32.8%;
+  height: 385px;
+  right: 32.7%;
   opacity: 0.8;
   position: absolute;
-  top: 15%;
-  width: 19.3vw;
+  top: 16%;
+  width: 375px;
   z-index: 1;
 }
 
@@ -74,12 +60,6 @@
   gap: 10px;
 }
 
-.iconParams {
-  display: flex;
-  gap: 5px;
-  padding: 15px 0 0 15px;
-}
-
 .Temp-icon {
   align-items: center;
   display: flex;
@@ -109,12 +89,6 @@
   justify-content: center;
 }
 
-.Grid-box-1 {
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 30px;
-}
-
 .Grid-box-2 {
   display: grid;
   grid-template-columns: auto auto;
@@ -124,15 +98,6 @@
 .head1 {
   font-size: 2rem;
   font-weight: 500;
-}
-
-.smallBox {
-  background: linear-gradient(to bottom, #353151, #130a27);
-  border: 1px solid #6a6488;
-  border-radius: 25px;
-  height: 19vh;
-  opacity: 0.8;
-  width: 9vw;
 }
 
 .smallBox-content {
@@ -162,29 +127,14 @@
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 25px;
-  bottom: 20.5%;
-  height: 19vh;
+  bottom: 21%;
+  height: 170px;
   opacity: 0.8;
   position: absolute;
-  right: 41%;
-  width: 9vw;
+  right: 40.9%;
+  width: 175px;
   z-index: 1;
 }
-
-/* .centralBox::after {
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.5) 0%,
-    rgba(0, 0, 0, 0) 40%
-  ) !important;
-  filter: opacity(1);
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-} */
 
 .Box {
   align-items: center;
@@ -194,11 +144,11 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
-  height: 45vh;
+  height: 440px;
   justify-content: center;
   margin-top: 10px;
   opacity: 0.8;
-  width: 15.8vw;
+  width: 300px;
 }
 
 .descTemp {
@@ -219,9 +169,9 @@
   background: linear-gradient(to bottom, #3a3259, #281e40, #130b25);
   border: 1px solid #6a6488;
   border-radius: 30px;
-  height: 50vh;
+  height: 480px;
   opacity: 0.8;
-  width: 22vw;
+  width: 430px;
 }
 
 .Icon-temp {
@@ -259,11 +209,11 @@
   border: 1px solid #6a6488;
   border-radius: 30px;
   display: flex;
-  height: 22vh;
+  height: 210px;
   justify-content: center;
   margin-left: 10px;
   margin-top: 50px;
-  width: 20.9vw;
+  width: 408px;
 }
 
 .Sub-content {

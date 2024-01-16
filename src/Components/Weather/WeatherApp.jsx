@@ -1,72 +1,24 @@
-import React, { useRef } from 'react';
 import './WeatherApp.css';
+
+import React from 'react';
 import { BsCloudRainHeavy } from 'react-icons/bs';
-import { FiSunrise, FiWind } from 'react-icons/fi';
-import { LiaThermometerThreeQuartersSolid } from 'react-icons/lia';
+import { FiWind } from 'react-icons/fi';
 import { MdOutlineWaterDrop } from 'react-icons/md';
-import cloud from '../Assets/images/cloudy.png';
-import cloud1 from '../Assets/images/cloudy1.png';
-import moon from '../Assets/images/moon-and-stars.png';
-import moon1 from '../Assets/images/night.png';
-import rainfall from '../Assets/images/rain.png';
-import sunrain from '../Assets/images/rain1.png';
-import sunshine from '../Assets/images/sunny.png';
+import Search from '../Search/SearchBar';
+import WeatherDesc from '../Conditions/WeatherCon';
+
+const cloud = '/Assets/images/cloudy.png';
+const cloud1 = '/Assets/images/cloudy1.png';
+const moon = '/Assets/images/moon-and-stars.png';
+const moon1 = '/Assets/images/night.png';
+const rainfall = '/Assets/images/rain.png';
+const sunrain = '/Assets/images/rain1.png';
+const sunshine = '/Assets/images/sunny.png';
 
 function WeatherApp() {
-  const apiKey = '220df04dc0c20f789cac20d653fc02c6';
-
-  const [cityInput, setCityInput] = React.useState('');
-  // const [city, setCity] = React.useState('');
-  const searchRef = useRef();
-  // const tempRef = useRef();
-  // const describRef = useRef();
-
-  // Perform debounceFetch on search field
-  const handleFetch = async () => {
-    // eslint-disable-next-line
-    console.log('cityinput', cityInput);
-
-    if (searchRef.current.innerHTML === '') {
-      return 0;
-    }
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${
-      searchRef.current.innerHTML || ''
-    }&units=Metric&appid=${apiKey}`;
-    const res = await fetch(url);
-    const data = await res.json();
-    // eslint-disable-next-line
-    console.log(data);
-
-    const Temperature = document.getElementsByClassName('weatherTemp');
-    Temperature[0].innerHTML = data.main.temp;
-
-    // tempRef.current.innerHTML = data.main.temp;
-    // describRef.current.innerHTML = data.weather[0].description;
-
-    return 0;
-  };
-
-  React.useEffect(() => {
-    const delayInputTimeoutId = setTimeout(() => {
-      handleFetch();
-    }, 1000);
-    return () => clearTimeout(delayInputTimeoutId);
-  }, [cityInput, 1000]);
-
   return (
     <div className="App">
-      <span className="Search-bar">
-        Right now in{' '}
-        <span
-          className="search"
-          contentEditable="true"
-          ref={searchRef}
-          onInput={(e) => setCityInput(e.target.innerHTML)}
-        >
-          Montreal, Canada
-        </span>
-        it is Cloudy
-      </span>
+      <Search />
       <div className="Weather-container">
         <div className="centralBox">
           <div className="Element1">
@@ -115,41 +67,13 @@ function WeatherApp() {
         </div>
         <div className="smallBox1">
           <div className="iconParams">
-            <BsCloudRainHeavy style={{ color: '#83A7B2', fontSize: 20 }} />
+            <BsCloudRainHeavy style={{ color: '#b0eeea', fontSize: 20 }} />
             <p>PRECIPITATION</p>
           </div>
         </div>
         <div className="Content">
-          <div className="Grid-box-1">
-            <div className="smallBox">
-              <div className="iconParams">
-                <FiWind style={{ fontSize: 20 }} />
-                <p>WIND</p>
-              </div>
-            </div>
-            <div className="smallBox">
-              <div className="iconParams">
-                <LiaThermometerThreeQuartersSolid
-                  style={{ color: '#ff4500', fontSize: 25 }}
-                />
-                <p>FEELS LIKE</p>
-              </div>
-            </div>
-            <div className="smallBox">
-              <div className="iconParams">
-                <MdOutlineWaterDrop
-                  style={{ color: '#00bfff', fontSize: 20 }}
-                />
-                <p>HUMIDITY</p>
-              </div>
-            </div>
-            <div className="smallBox">
-              <div className="iconParams">
-                <FiSunrise style={{ color: '#ffd700', fontSize: 20 }} />
-                <p>SUNRISE</p>
-              </div>
-            </div>
-          </div>
+          <WeatherDesc />
+
           <div className="Box1">
             <div className="Icon-temp">
               <img
@@ -258,7 +182,7 @@ function WeatherApp() {
                 <img
                   src={cloud}
                   alt="Cloudy"
-                  style={{ height: 100, width: 100 }}
+                  style={{ height: 95, width: 95 }}
                 />
                 <div className="temp-days">
                   <h2 className="head1">21˚</h2>
@@ -271,7 +195,7 @@ function WeatherApp() {
                 <img
                   src={moon1}
                   alt="twilight"
-                  style={{ height: 100, width: 100 }}
+                  style={{ height: 95, width: 95 }}
                 />
                 <div className="temp-days">
                   <h2 className="head1">21˚</h2>
@@ -284,7 +208,7 @@ function WeatherApp() {
                 <img
                   src={sunrain}
                   alt="sunrain"
-                  style={{ height: 100, width: 100 }}
+                  style={{ height: 95, width: 95 }}
                 />
                 <div className="temp-days">
                   <h2 className="head1">21˚</h2>
@@ -297,7 +221,7 @@ function WeatherApp() {
                 <img
                   src={rainfall}
                   alt="rainfall"
-                  style={{ height: 100, width: 100 }}
+                  style={{ height: 95, width: 95 }}
                 />
                 <div className="temp-days">
                   <h2 className="head1">21˚</h2>
