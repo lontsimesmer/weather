@@ -60,11 +60,25 @@
   gap: 10px;
 }
 
+.subData {
+  display: flex;
+  gap: 5px;
+}
+
 .Temp-icon {
   align-items: center;
   display: flex;
   justify-content: space-between;
   padding-bottom: 10px;
+}
+
+.tempdata {
+  display: flex;
+}
+
+.unit {
+  font-size: 4rem;
+  font-weight: 500;
 }
 
 .temp-desc {
@@ -192,15 +206,35 @@
   font-weight: 500;
 }
 
+.weatherTemp1 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.weatherTemp2 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+
 .high-low {
   display: flex;
   gap: 5px;
+}
+
+.res {
+  display: flex;
 }
 
 .city-desc {
   display: flex;
   gap: 180px;
   justify-content: center;
+}
+
+.city-country {
+  align-items: center;
+  display: flex;
+  gap: 5px;
 }
 
 .innerContent {

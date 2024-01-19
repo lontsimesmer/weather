@@ -22,9 +22,12 @@ function WeatherApp() {
       <div className="Weather-container">
         <div className="centralBox">
           <div className="Element1">
-            <h3>Monreal</h3>
+            <h3 className="cityName">Montreal</h3>
             <div className="Temp-icon">
-              <h1 className="weatherTemp">19˚</h1>
+              <div className="tempdata">
+                <h1 className="weatherTemp">19</h1>
+                <span className="unit">&deg;</span>
+              </div>
               <img
                 src={cloud1}
                 alt="Cloudy"
@@ -33,10 +36,18 @@ function WeatherApp() {
             </div>
             <div className="temp-desc">
               <div className="high-low">
-                <p>H:24˚</p>
-                <p>L:18˚</p>
+                <div className="res">
+                  <p>H:</p>
+                  <p className="tempMax">24</p>
+                  <span>&deg;</span>
+                </div>
+                <div className="res">
+                  <p>L:</p>
+                  <p className="tempMin">18</p>
+                  <span>&deg;</span>
+                </div>
               </div>
-              <p>Cloudy</p>
+              <p className="property">Cloudy</p>
             </div>
           </div>
           <div className="Element2">
@@ -46,21 +57,30 @@ function WeatherApp() {
                   <BsCloudRainHeavy />
                   <p>Precipitation</p>
                 </div>
-                <h4>9 mm in 24h</h4>
+                <div className="subData">
+                  <h4 className="rainfall">9</h4>
+                  <p>mm in 24h</p>
+                </div>
               </div>
               <div className="Items">
                 <div className="iconParams">
                   <FiWind />
                   <p>Wind</p>
                 </div>
-                <h4>9KM/H</h4>
+                <div className="subData">
+                  <h4 className="wind-speed">9</h4>
+                  <p>KM/H</p>
+                </div>
               </div>
               <div className="Items">
                 <div className="iconParams">
                   <MdOutlineWaterDrop />
                   <p>Humidity</p>
                 </div>
-                <h4>83%</h4>
+                <div className="subData">
+                  <h4 className="humid">83</h4>
+                  <p>%</p>
+                </div>
               </div>
             </div>
           </div>
@@ -82,16 +102,30 @@ function WeatherApp() {
                 style={{ height: 180, width: 180 }}
               />
               <div className="tempStats">
-                <h1 className="weatherTemp">19˚C</h1>
+                <div className="tempdata">
+                  <h1 className="weatherTemp1">19</h1>
+                  <span className="unit">&#8451;</span>
+                </div>
                 <div className="high-low">
-                  <p>H:24˚</p>
-                  <p>L:18˚</p>
+                  <div className="res">
+                    <p>H:</p>
+                    <p className="temp-max">24</p>
+                    <span>&deg;</span>
+                  </div>
+                  <div className="res">
+                    <p>L:</p>
+                    <p className="temp-min">18</p>
+                    <span>&deg;</span>
+                  </div>
                 </div>
               </div>
             </div>
             <div className="city-desc">
-              <p>Sunny</p>
-              <h4>Monreal, Canada</h4>
+              <p className="property1">Sunny</p>
+              <div className="city-country">
+                <h4 className="cityName1">Montreal, Canada</h4>,
+                <h4 className="country">.</h4>
+              </div>
             </div>
             <div className="innerContent">
               <div className="Sub-content">
@@ -165,15 +199,29 @@ function WeatherApp() {
               style={{ height: 150, width: 150 }}
             />
             <div className="descTemp">
-              <h3>Montreal, Canada</h3>
-              <h1 className="weatherTemp">19˚</h1>
+              <div className="city-country">
+                <h3 className="cityName2">Montreal, Canada</h3>,
+                <h4 className="country1">.</h4>
+              </div>
+              <div className="tempdata">
+                <h1 className="weatherTemp2">19</h1>
+                <span className="unit">&deg;</span>
+              </div>
             </div>
             <div className="variants">
               <div className="high-low">
-                <p>H:24˚</p>
-                <p>L:18˚</p>
+                <div className="res">
+                  <p>H:</p>
+                  <p className="tempmax">24</p>
+                  <span>&deg;</span>
+                </div>
+                <div className="res">
+                  <p>L:</p>
+                  <p className="tempmin">18</p>
+                  <span>&deg;</span>
+                </div>
               </div>
-              <p>Cloudy night</p>
+              <p className="property2">Cloudy night</p>
             </div>
           </div>
           <div className="Grid-box-2">

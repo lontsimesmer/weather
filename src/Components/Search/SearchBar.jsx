@@ -25,10 +25,48 @@ export default function Search() {
     console.log(data);
 
     const Temperature = document.getElementsByClassName('weatherTemp');
-    Temperature[0].innerHTML = data.main.temp;
+    const Temperature1 = document.getElementsByClassName('weatherTemp1');
+    const Temperature2 = document.getElementsByClassName('weatherTemp2');
+    const Precipitation = document.getElementsByClassName('rainfall');
+    const Wind = document.getElementsByClassName('wind-speed');
+    const Humidity = document.getElementsByClassName('humid');
+    const Maxtemp = document.getElementsByClassName('tempMax');
+    const Mintemp = document.getElementsByClassName('tempMin');
+    const Maxtemp1 = document.getElementsByClassName('temp-max');
+    const Mintemp1 = document.getElementsByClassName('temp-min');
+    const Maxtemp2 = document.getElementsByClassName('tempmax');
+    const Mintemp2 = document.getElementsByClassName('tempmin');
+    const Description = document.getElementsByClassName('describ');
+    const Name = document.getElementsByClassName('cityName');
+    const Name1 = document.getElementsByClassName('cityName1');
+    const Name2 = document.getElementsByClassName('cityName2');
+    const Country = document.getElementsByClassName('country');
+    const Country1 = document.getElementsByClassName('country1');
+    const Property = document.getElementsByClassName('property');
+    const Property1 = document.getElementsByClassName('property1');
+    const Property2 = document.getElementsByClassName('property2');
 
-    // tempRef.current.innerHTML = data.main.temp;
-    // describRef.current.innerHTML = data.weather[0].description;
+    Temperature[0].innerHTML = Math.ceil(data.main.temp);
+    Temperature1[0].innerHTML = Math.ceil(data.main.temp);
+    Temperature2[0].innerHTML = Math.ceil(data.main.temp);
+    Precipitation[0].innerHTML = data.wind.deg;
+    Wind[0].innerHTML = Math.floor(data.wind.speed);
+    Humidity[0].innerHTML = data.main.humidity;
+    Maxtemp[0].innerHTML = Math.round(data.main.temp_max);
+    Maxtemp1[0].innerHTML = Math.round(data.main.temp_max);
+    Maxtemp2[0].innerHTML = Math.round(data.main.temp_max);
+    Mintemp[0].innerHTML = Math.round(data.main.temp_min);
+    Mintemp1[0].innerHTML = Math.round(data.main.temp_min);
+    Mintemp2[0].innerHTML = Math.round(data.main.temp_min);
+    Description[0].innerHTML = data.weather[0].description;
+    Name[0].innerHTML = data.name;
+    Name1[0].innerHTML = data.name;
+    Name2[0].innerHTML = data.name;
+    Country[0].innerHTML = data.sys.country;
+    Country1[0].innerHTML = data.sys.country;
+    Property[0].innerHTML = data.weather[0].main;
+    Property1[0].innerHTML = data.weather[0].main;
+    Property2[0].innerHTML = data.weather[0].main;
 
     return 0;
   };
@@ -51,7 +89,7 @@ export default function Search() {
       >
         Montreal, Canada
       </span>
-      it is Cloudy
+      there are <span className="describ" />
     </span>
   );
 }
