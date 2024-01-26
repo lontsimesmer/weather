@@ -22,7 +22,7 @@ function WeatherApp() {
       <div className="Weather-container">
         <div className="centralBox">
           <div className="Element1">
-            <h3 className="cityName">Montreal</h3>
+            <h3 className="cityName">Yaounde</h3>
             <div className="Temp-icon">
               <div className="tempdata">
                 <h1 className="weatherTemp">19</h1>
@@ -123,7 +123,7 @@ function WeatherApp() {
             <div className="city-desc">
               <p className="property1">Sunny</p>
               <div className="city-country">
-                <h4 className="cityName1">Montreal, Canada</h4>,
+                <h4 className="cityName1">Yaounde, Cameroon</h4>,
                 <h4 className="country">.</h4>
               </div>
             </div>
@@ -200,7 +200,7 @@ function WeatherApp() {
             />
             <div className="descTemp">
               <div className="city-country">
-                <h3 className="cityName2">Montreal, Canada</h3>,
+                <h3 className="cityName2">Yaounde, Cameroon</h3>,
                 <h4 className="country1">.</h4>
               </div>
               <div className="tempdata">
@@ -221,7 +221,10 @@ function WeatherApp() {
                   <span>&deg;</span>
                 </div>
               </div>
-              <p className="property2">Cloudy night</p>
+              <div className="desc-prop">
+                <p className="property2">Cloudy</p>
+                <p>Night</p>
+              </div>
             </div>
           </div>
           <div className="Grid-box-2">

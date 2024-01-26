@@ -1,9 +1,17 @@
 import './SearchBar.css';
+// import sun_icon from '../../../public/Assets/images/sunny.png';
+// import cloud_icon from '../../../public/Assets/images/cloudy.png';
+// import clear_icon from '../../../public/Assets/images/cloudy1.png';
+// import rain_icon from '../../../public/Assets/images/rain.png';
+// import drizzle_icon from '../../../public/Assets/images/rain1.png';
+// import moon_icon from '../../../public/Assets/images/moon-and-stars.png';
+// import twilight_icon from '../../../public/Assets/images/moon.png';
 
 import { useState, useEffect, useRef } from 'react';
 
 export default function Search() {
   const [cityInput, setCityInput] = useState('');
+  // const [getIcons, setGetIcons] = useState();
 
   const searchRef = useRef();
 
@@ -19,6 +27,9 @@ export default function Search() {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${
       searchRef.current.innerHTML || ''
     }&units=Metric&appid=${apiKey}`;
+    // const url = `https://api.openweathermap.org/data/2.5/forecast?q=${
+    //   searchRef.current.innerHTML || ''
+    // }=Metric&appid=${apiKey}`;
     const res = await fetch(url);
     const data = await res.json();
     // eslint-disable-next-line
@@ -87,7 +98,7 @@ export default function Search() {
         ref={searchRef}
         onInput={(e) => setCityInput(e.target.innerHTML)}
       >
-        Montreal, Canada
+        Yaounde, Cameroon
       </span>
       there are <span className="describ" />
     </span>

@@ -221,6 +221,11 @@
   gap: 5px;
 }
 
+.desc-prop {
+  display: flex;
+  gap: 5px;
+}
+
 .res {
   display: flex;
 }
@@ -263,10 +268,10 @@
   display: flex;
   flex-direction: column;
   gap: 35px;
-  height: 16vh;
+  height: 160px;
   justify-content: center;
   opacity: 0.8;
-  width: 3.2vw;
+  width: 62px;
 }
 
 .day-icon {
