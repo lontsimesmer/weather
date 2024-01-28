@@ -1,0 +1,13 @@
+.Search-bar {
+  color: #f5fffa;
+  font-size: 30px;
+}
+
+.search {
+  border-bottom: 1px solid #ccc;
+  font-size: 25px;
+  min-width: 2vw;
+  opacity: 0.5;
+  outline: none;
+  padding: 0 10px;
+}
